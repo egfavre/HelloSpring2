@@ -8,5 +8,20 @@
 {{#person}}
 {{name}} is from {{city}} and is {{age}} years old.
 {{/person}}
+
+{{^user}}
+<form action="/login" method="post">
+    <input type="text" name="username" placeholder="enter name"/>
+    <button type="submit">Login</button>
+</form>
+{{/user}}
+
+{{#user}}
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+Hello, {{name}}
+{{/user}}
+
 </body>
 </html>
