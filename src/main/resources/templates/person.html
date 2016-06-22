@@ -22,6 +22,22 @@
 </form>
 Hello, {{name}}
 {{/user}}
+<script src="jquery-3.0.0.js"></script>
+<script>
+    var person = {
+        name: "Bob",
+        city: "C",
+        age:30
+        };
 
+    $.post(
+        {
+        method: "POST",
+        contentType: "application/json",
+        url: "/person.json",
+        data: JSON.stringify(person)
+        }
+    );
+</script>
 </body>
 </html>
